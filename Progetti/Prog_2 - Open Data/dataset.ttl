@@ -1,0 +1,173 @@
+@prefix IO:   <https://w3id.org/italia/onto/IO/> .
+@prefix cov:  <https://w3id.org/italia/onto/COV/> .
+@prefix clv:  <https://w3id.org/italia/onto/CLV/> .
+@prefix prj:  <https://w3id.org/italia/onto/Project/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+
+
+@prefix org:  <https://example.teamblue.it/catalogues/PNRR_CAT/PNRR_PROJECTS/organizations/> .
+@prefix city: <https://example.teamblue.it/catalogues/PNRR_CAT/PNRR_PROJECTS/cities/> .
+@prefix prog: <https://example.teamblue.it/catalogues/PNRR_CAT/PNRR_PROJECTS/projects/> .
+@prefix adv:  <https://example.teamblue.it/catalogues/PNRR_CAT/PNRR_PROJECTS/advices/> .
+
+
+# Organizations
+
+org:IACP_aciReale 
+    a                       cov:PublicOrganization ;
+	cov:IPACode             "iacpcac" ;
+	cov:legalName           "Istituto Autonomo Case Popolare Comprensori di Acireale" ;
+	clv:hasSpatialCoverage  city:Acireale ;
+	prj:isInvolvedInProject prog:SPIDCIE_acireale .
+
+org:UDCM_collineDelFiora 
+    a                       cov:PublicOrganization ;
+	cov:IPACode             "udcmc" ;
+	cov:legalName           "Unione Dei Comuni Montani Colline del Fiora" ;
+	clv:hasSpatialCoverage  city:Pitigliano ;
+	prj:isInvolvedInProject prog:SPIDCIE_udcmCollineDelFiora .
+
+org:CODAV_viboValentia 
+    a                       cov:PublicOrganization ;
+	cov:IPACode             "codav" ;
+	cov:legalName           "Consiglio dell'Ordine Degli Avvocati di Vibo Valentia" ;
+	clv:hasSpatialCoverage  city:ViboValentia ;
+	prj:isInvolvedInProject prog:SPIDCIE_viboValentia .
+
+org:INRCA_IRCCS 
+    a                      cov:PublicOrganization ;
+	cov:IPACode            "inrca_rm" ;
+	cov:legalName          "INRCA - IRCCS Istituto nazionale di ricovero e cura per anziani" ;
+	clv:hasSpatialCoverage  city:Ancona ;
+	prj:isInvolvedInProject prog:APPIO_ancona .
+
+org:AZOS_sanGiovanniAddolorata 
+    a                      cov:PublicOrganization ;
+	cov:IPACode            "azos_sga" ;
+	cov:legalName          "Azienda Ospedaliera Complesso Ospedaliero San Giovanni Addolorata" ;
+	clv:hasSpatialCoverage  city:Roma ;
+	prj:isInvolvedInProject prog:PAGOPA_roma .
+
+org:RGN_emiliaRomagna 
+    a                      cov:PublicOrganization ;
+	cov:IPACode            "r_emiro" ;
+	cov:legalName          "Regione EmiliaRomagna" ;
+	clv:hasSpatialCoverage  city:Bologna ;
+	prj:isInvolvedInProject prog:PAGOPA_bologna .
+	
+org:PRV_foggia 
+    a                       cov:PublicOrganization ;
+	cov:IPACode             "p_fg" ;
+	cov:legalName           "Provincia di Foggia" ;
+	clv:hasSpatialCoverage  city:Foggia ;
+	prj:isInvolvedInProject prog:SPIDCIE_foggia.
+
+org:PRV_sudSardegna 
+    a                       cov:PublicOrganization ;
+	cov:IPACode             "p_sudsar" ;
+	cov:legalName           "Provincia del Sud Sardegna" ;
+	clv:hasSpatialCoverage  city:Carbonia ;
+	prj:isInvolvedInProject prog:SPIDCIE_carbonia .
+
+## Cities
+
+city:Acireale 
+    a             clv:City ;
+	IO:identifier "087000" ;
+	IO:name       "Acireale" .
+
+city:Pitigliano 
+  a               clv:City ;
+	IO:identifier "053019" ;
+	IO:name       "Pitigliano" .
+
+city:ViboValentia 
+    a             clv:City ;
+	IO:identifier "102047" ;
+	IO:name       "Vibo Valentia" .
+
+city:Ancona 
+    a             clv:City ;
+	IO:identifier "042002" ;
+	IO:name       "Ancona" .
+
+city:Roma 
+    a             clv:City ;
+	IO:identifier "058091" ;
+	IO:name       "Roma" .
+
+city:Bologna 
+    a             clv:City ;
+	IO:identifier "037006" ;
+	IO:name       "Bologna" .
+
+city:Foggia 
+    a             clv:City ;
+	IO:identifier "071024" ;
+	IO:name       "Foggia" .
+
+city:Carbonia 
+    a             clv:City ;
+	IO:identifier "111009" ;
+	IO:name       "Carbonia" .
+
+# Projects
+
+prog:SPIDCIE_acireale 
+    a                    prj:PublicInvestmentProject ;
+	prj:projectTotalCost 14000.0 ;
+	prj:hasCall          adv:1_4_4_SPIDCIE_others_may .
+
+prog:SPIDCIE_udcmCollineDelFiora 
+    a                    prj:PublicInvestmentProject ;
+	prj:projectTotalCost 14000.0 ;
+	prj:hasCall          adv:1_4_4_SPIDCIE_others_sept . 
+
+prog:SPIDCIE_viboValentia 
+    a                    prj:PublicInvestmentProject ;
+	prj:projectTotalCost 14000.0 ;
+	prj:hasCall          adv:1_4_4_SPIDCIE_others_may .
+
+prog:APPIO_ancona 
+    a                    prj:PublicInvestmentProject ;
+	prj:projectTotalCost 35424.0 ;
+	prj:hasCall          adv:1_4_3_APPIO_others_may .
+
+prog:PAGOPA_roma 
+    a                    prj:PublicInvestmentProject ;
+	prj:projectTotalCost 236176.0 ;
+	prj:hasCall          adv:1_4_3_PAGOPA_others_may .
+
+prog:PAGOPA_bologna 
+    a                    prj:PublicInvestmentProject ;
+	prj:projectTotalCost 111498.0 ;
+	prj:hasCall          adv:1_4_3_PAGOPA_others_sept .
+
+prog:SPIDCIE_foggia 
+    a                    prj:PublicInvestmentProject ;
+	prj:projectTotalCost 071024.0 ;
+	prj:hasCall          adv:1_4_4_SPIDCIE_others_may . 
+
+prog:SPIDCIE_carbonia 
+    a                    prj:PublicInvestmentProject ;
+	prj:projectTotalCost 111009.0 ;
+	prj:hasCall          adv:1_4_4_SPIDCIE_others_may .
+
+# Avviso
+
+adv:1_4_4_SPIDCIE_others_may a prj:Call ;
+	IO:name "1.4.4 Adozione SPID CIE-Amministrazion i diverse da Comuni e Scuole - Maggio 2022" .
+
+adv:1_4_4_SPIDCIE_others_sept a prj:Call ;
+	IO:name "1.4.4 Adozione SPID CIEAmm.ni diverse da Comuni e Scuole - Settembre 2022" .
+
+adv:1_4_3_APPIO_others_may a prj:Call ;
+	IO:name "1.4.3 - app IO - Altri Enti - Maggio 2022" .
+
+adv:1_4_3_PAGOPA_others_may a prj:Call ;
+	IO:name "1.4.3 - pagoPA - Altri Enti - Maggio 2022" .
+
+adv:1_4_3_PAGOPA_others_sept a prj:Call ;
+	IO:name "1.4.3 - pagoPA - Altri Enti - Settembre 2022" .
